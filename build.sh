@@ -37,6 +37,10 @@ function checkGccVersion {
 
 function buildSource {
 
+    if [ ! -d build ]; then
+        mkdir build
+    fi
+
     cd $BUILD_DIR
 
     cmake $FLAGS ..;
